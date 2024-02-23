@@ -1,4 +1,4 @@
-import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 export const MemoryLeak: React.FC = () => {
   const shouldRender = true;
@@ -15,7 +15,7 @@ export const MemoryLeak: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        {shouldRender && <img src={src} />}
+        {shouldRender && <IonButton>{src}</IonButton>}
       </IonContent>
     </IonPage>
   );

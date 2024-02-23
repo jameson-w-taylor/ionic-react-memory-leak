@@ -1,8 +1,8 @@
-import { IonBackButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 const MyComponent = ({ shouldRender }: { shouldRender: boolean }) => {
   const src = `${Date.now()}WhyIsThisHappening?`;
-  return shouldRender ? <img src={src} /> : <></>;
+  return shouldRender ? <IonButton>{src}</IonButton> : <></>;
 };
 
 export const WorksFine: React.FC = () => {
