@@ -1,0 +1,7 @@
+{
+  "name": "react-memory-leak",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
