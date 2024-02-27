@@ -23,6 +23,7 @@ export const Start: React.FC = () => {
         </IonGrid>
         <div>
           Use this app to see a memory leak.<br />
+          Be sure to run this test in "Incognito Mode", as it seems that the LastPass extension causes a memory leak.<br />
           Open dev tools to the "Memory" tab so you can take heap snapshots.<br />
           <hr />
           First, let's notice what should be normal behavior.<br />
@@ -49,13 +50,14 @@ export const Start: React.FC = () => {
             <li>With the second snapshot selected, use 'ctrl-f' to search for "WhyIsThisHappening?" in the snapshot</li>
             <li>There will be 4 results, one prefixed with a timestamp and 3 wihout a prefix (2 are from the text on this page)</li>
             <li>
-              When you repeat these steps, you'll notice that the entries accumulate over time:
+              If you repeat these steps with LastPass extension enabled, you'll notice that the entries accumulate over time:
               <ul>
                 <li>The second time you visit "Memory Leak", the snapshot will now contain 5 matches (2 with timestamps)</li>
                 <li>Returning to "Start", the snapshot will now contain 5 matches as well (2 with timestamps)</li>
                 <li>And for each iteration of these steps the amount of entries with timestamps will continue to climb</li>
               </ul>
             </li>
+            <li>Without any extensions enabled, the only difference between these tests seems to be 3 results versus 4 (unsure why there'd be any difference at all though...)</li>
           </ol>
         </div>
       </IonContent>
